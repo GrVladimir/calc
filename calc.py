@@ -7,7 +7,7 @@ def calc(term):
     mistake=''
     summary = [] #итоговое выражение    
 
-    if term[0].isdigit() == False:
+    if term[0] == '-':
         term='0'+term
         
         
