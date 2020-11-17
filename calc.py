@@ -58,6 +58,8 @@ def calc(term):
                             
         # если i элемент это * или /, то добавим его в znak[colsk]
         if term[i] in ['*', '/']:
+            if len(znak[colsk])>0 and znak[colsk][len(znak[colsk])-1] in ['*', '/']:
+                summary.append(znak[colsk].pop(len(znak[colsk])-1)) 
             znak[colsk].append(term[i])
             
         # если i элемент это ')', то то добавояем все знаки из словаря znak[colsk] в обратном порядке в summary
